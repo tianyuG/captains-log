@@ -5,6 +5,7 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{% if page.date %}last updated <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_rfc822 }}</time><span style="margin-left: 5px; margin-right: 5px;">&middot;</span>{% endif %}by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="https://tianyu.ge">tianyu</a></span></span><span style="margin-left: 5px; margin-right: 5px;">&middot;</span><a href="{{ page.url }}">permalink</a></p>
   </header>
 
   <div class="post-content">
